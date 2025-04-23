@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 15px 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 25px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 10px 0;
+    display: none;
+    width: 250px;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.submenu li {
+    padding: 20px 10px; /* Aumenta el espacio interno */
+    min-width: 80px; /* Ajusta el ancho mínimo */
+}
+
+
+.submenu a {
+    padding: 10px 20px;
+}
+
+.submenu a:hover {
+    background-color: #666;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.search-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-login input {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 25px; /* Hace que el texto sea más grande */
+    border: none;
+}
+
+.search-login button {
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px; /* Tamaño más grande */
+    cursor: pointer;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #84fdfd80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #84fdfd80;
+    user-select: none;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    color: #ffffff;
+    background: #2e81ff;
+    border: 1px solid #2e81ff;
+    text-shadow: 
+    0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 15px #ffffff;
+    box-shadow:
+    0 0 5px #2e81ff,
+    0 0 20px #2e81ff,
+    0 0 50px #2e81ff,
+    0 0 100px #2bd5ff;
+}
+
+
+
+h1{
+    color:whitesmoke;
+    text-align: center;
+}
+h2 {
+    color: rgb(28, 20, 30);
+    text-align: center;
+}
+h3 {
+    color: rgb(81, 81, 81);
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    color: #4d4848;
+text-align: center;
+margin: 0 22;
+}
+section {
+    padding: 30px;
+    margin: 20px 0;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+
+}
+
+.foto-perfil {
+    display: block;
+    margin: 0 auto;
+width: 150px;
+height: 150px;
+border-radius: 50%;
+object-fit: cover;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea{
+
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5PX;
+}
+form button {
+    padding: 10px 20px;
+    background-color: #b11d1d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+ form button:hover {
+    background-color: #3dd668;
+
+ }
+
+#servicios h2 {
+    color: black; /* Asegura que el título sea visible */
+}
+
+#servicios ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#servicios li {
+    font-size: 18px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
+    background-color: white; /* Hace que las tarjetas sean blancas */
+    color: black; /* Letra negra para mejor visibilidad */
+    transition: background-color 0.3s, font-size 0.3s;
+}
+
+#servicios li:hover {
+    font-size: 20px;
+    background-color: #949494; /* Color de fondo diferente al pasar el mouse */
+    color: black;
+}
+
+@media(max-width:600px) {
+    .foto-perfil {
+        width: 120px;
+        height: 120px;
+     }
+}
+h1,h2{
+    font-size: 24px;
+
+}
+p{
+font-size: 16px;
+
+}
+ form{
+    width: 590%;
+
+ }
+ 
+ .imagen{
+    position: absolute;
+    
+ } 
+
+
+/* Ajustes para hoja de vida */
+
+.header-cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #2e2e2e;
+    text-align: center;
+}
+
+.perfil-cv h1, .perfil-cv h2 {
+    margin: 10px 0;
+    color: white;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+section h2 {
+    text-align: left;
+    color: #222;
+}
+
+section p, section ul {
+    text-align: left;
+    color: #333;
+}
